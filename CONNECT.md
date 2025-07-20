@@ -1,3 +1,5 @@
+![TestConnect logo](./Connect.png)
+
 # TestConnect – 3rd Party Instrument & Integration Adapters
 
 **TestConnect** is the integration and adapter layer of the TC-Platform.  
