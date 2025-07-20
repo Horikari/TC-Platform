@@ -1,37 +1,48 @@
-# CONNECT – 3rd Party Integrations & Environmental Data
+# TestConnect – 3rd Party Instrument & Integration Adapters
 
-TC-Platform is designed to flexibly connect to any external system, sensor, or data source.  
-This document summarizes possible integrations, examples, and community-contributed solutions.
-
----
-
-## Environmental Data Integration
-
-- **Home Assistant:**  
-  Home Assistant can write timestamped environmental data (e.g., temperature, humidity) to InfluxDB.  
-  The TC system can automatically associate these data points with test runs.
-- **Other BMS systems:**  
-  KNX, Modbus, BACnet, etc. – any system capable of writing data to InfluxDB or other databases can be integrated.
-- **Example:**  
-  Environmental data queried at the time of the test run can be automatically included in the report.
+**TestConnect** is the integration and adapter layer of the TC-Platform.  
+Its purpose is to enable seamless connection of 3rd party instruments, sensors, controllers, and environmental systems to the TC ecosystem – regardless of protocol, interface, or manufacturer.
 
 ---
 
-## Adapters & Plugins
+## What does TestConnect cover?
 
-- **USB, LAN, WiFi, MQTT, REST API** – any 3rd party device or software can be integrated.
-- **Examples:**  
-  - Custom or commercial instruments  
-  - IoT sensors  
-  - Cloud-based data collection  
-  - Custom adapters, protocol converters
+- **Instrument adapters:**  
+  Hardware or software modules that allow connecting 3rd party instruments (e.g., power supplies, DMMs, signal generators, climate chambers, etc.) to the TC-Platform.
+- **Protocol bridges:**  
+  Drivers and middleware for non-VISA instruments (e.g., Modbus, MQTT, REST, USB, proprietary protocols).
+- **Cable breakout & pin mapping:**  
+  Schematics, pinouts, and mechanical adapters for connecting instruments with custom or non-standard connectors.
+- **Environmental integration:**  
+  Connecting building management systems (BMS), Home Assistant, or other sources of environmental data (temperature, humidity, etc.).
+- **Driver library:**  
+  Open source drivers for instruments that are not natively supported by PyVISA or standard interfaces.
 
 ---
 
-## Community Suggestions
+## Example Integrations
+
+- **Modbus TCP/RTU instrument integration** (e.g., industrial power meters, PLCs)
+- **MQTT/REST API sensors** (IoT devices, smart relays, cloud-based measurement)
+- **USB-to-serial adapters** for legacy instruments
+- **Custom cable pinout documentation** for specific instrument models
+- **Home Assistant or BMS data bridge** for environmental parameters
+- **Python driver for a proprietary instrument** (if no VISA/SCPI support)
+
+---
+
+## Contribution Guidelines
+
+- Share your adapter schematics, pinouts, or driver code as a pull request or issue.
+- Document the supported instrument, protocol, and integration steps.
+- If you have a working integration, add a usage example or test script.
+
+---
+
+## Community
 
 If you have an idea, integration example, or want to share your own solution, open an issue or pull request!
 
 ---
 
-**The goal of TC-Platform is to be an open, extensible, and integrable test ecosystem for everyone.**
+**TestConnect makes the TC-Platform truly universal and future-proof by enabling integration with any instrument, sensor, or system.**
