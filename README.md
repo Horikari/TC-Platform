@@ -1,3 +1,5 @@
+![TC-Platform logo](./TC_logo.webp)
+
 # TC-Platform – Open Modular Test Ecosystem
 
 **TC-Platform** is an open-source, modular test ecosystem built on three main pillars:  
