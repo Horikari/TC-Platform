@@ -1,11 +1,18 @@
-.htaccess
-css.php
-rpc/
-sites/site*/admin/
-sites/site*/private/
-sites/site*/public/admin/
-sites/site*/public/setup/
-sites/site*/public/theme/
-textpattern/
-HISTORY.txt
-README.txt
+# Temporary files
+*~
+*.bak
+*.tmp
+.DS_Store
+.vscode/
+.idea/
+__pycache__/
+
+# Build output (if any)
+_site/
+build/
+dist/
+
+# Image source files (if not needed in repo)
+*.psd
+*.ai
+*.svg
